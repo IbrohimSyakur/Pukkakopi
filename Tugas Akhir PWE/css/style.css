@@ -1,0 +1,495 @@
+:root {
+  --primary: #bb7530;
+  --bg: #713f24;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Urbanist", Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  /* border-bottom: 1px solid #805e3d; */
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  z-index: 1000;
+  mix-blend-mode: color-burn;
+}
+
+.navbar .navbar-nav {
+  margin-left: auto;
+}
+
+.navbar .navbar-logo {
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  /* mix-blend-mode: color-burn; */
+}
+
+.navbar .navbar-logo span {
+  color: #794b1d;
+}
+
+.navbar .navbar-nav a {
+  color: #2e2e2e;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 1rem;
+  /* mix-blend-mode: color-burn; */
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #2e2e2e;
+  mix-blend-mode: color-burn;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#menu {
+  display: none;
+}
+/* Navbar End */
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* .hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgb(1, 1, 3, 1) 3%,
+    rgb(255, 255, 255, 0) 25%
+  );
+} */
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 4rem;
+  color: var(--primary);
+  /* text-shadow: 1px 1px 3px rgb(1, 1, 3, 0.5); */
+  font-weight: 700;
+  line-height: 1;
+  font-family: "Urbanist";
+}
+
+.hero .content span {
+  color: #794b1d;
+  font-style: italic;
+  font-family: "Urbanist";
+}
+
+.hero .content p {
+  font-size: 1.4rem;
+  color: #fff;
+  line-height: 1.6;
+  font-weight: 300;
+  margin-top: 1rem;
+  mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  background-color: var(--primary);
+  color: #ffe9d3;
+  border-radius: 2rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+/* Hero End */
+
+/* About */
+.tentang {
+  padding: 8rem 7% 8rem;
+  background-color: #ffe9d3;
+}
+
+.tentang .row {
+  display: flex;
+  align-items: center;
+}
+
+.tentang .row .tentang-img {
+  flex: 1 1 45rem;
+}
+
+.tentang .row .tentang-img img {
+  width: 100%;
+}
+
+.tentang .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.tentang .row .content h3,
+.menu .row .content h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+
+.tentang .row .content h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  mix-blend-mode: difference;
+}
+
+.tentang .row .content p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.6;
+  mix-blend-mode: difference;
+}
+/* About End */
+
+/* Menu */
+.menuu {
+  padding: 8rem 7% 8rem;
+  left: 0;
+}
+
+.menuu .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  justify-content: center;
+}
+
+.menu-card {
+  text-align: center;
+}
+
+.menuu .row .menuu-img {
+  flex: 1 1 45rem;
+}
+
+.menuu .row .menuu-img img {
+  width: 100%;
+}
+
+.menuu .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.menuu .content h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  align-content: center;
+  text-align: center;
+}
+
+.menuu .content h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.menuu .content p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.a4-container {
+  width: 60rem;
+  height: auto;
+  margin: auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: none;
+}
+
+.slider img.active {
+  display: block;
+}
+
+.slider .prev,
+.slider .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #ffe9d3;
+  font-size: 36px;
+  font-weight: 100;
+  border: none;
+  padding: 4rem 1rem;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.slider .prev {
+  left: 10px;
+}
+
+.slider .next {
+  right: 10px;
+}
+/* Menu End */
+
+/* Contact */
+.kontak {
+  padding: 8rem 7% 8rem;
+  text-align: center;
+}
+
+.kontak h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+
+.kontak h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.kontak p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.kontak .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #ffe9d3;
+  border-radius: 1rem;
+
+  /* flex-wrap: wrap; */
+}
+
+.kontak .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.kontak .row form {
+  flex: 1 1 45rem;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.kontak .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: #2e2e2e;
+  padding: 1rem;
+  padding-left: 2rem;
+  border-radius: 10rem;
+}
+
+.kontak .row form .input-group input {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  background: none;
+  color: #fff;
+}
+
+.kontak .row form .btn {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  color: #ffe9d3;
+  background-color: var(--primary);
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 10rem;
+}
+/* Contact End */
+
+/* Media Query */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #menu {
+    display: inline-block;
+  }
+
+  .navbar {
+    mix-blend-mode: normal;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 20rem;
+    height: 100vh;
+    background-color: #2e2e2e;
+    transition: 0.2s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #ffe9d3;
+    font-size: 2rem;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    mix-blend-mode: normal;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .tentang .row {
+    flex-wrap: wrap;
+  }
+
+  .tentang .row .tentang-img img {
+    height: 24rem;
+    object-fit: scale-down;
+    object-position: center;
+  }
+
+  .a4-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .slider {
+    height: auto;
+  }
+
+  .slider img {
+    height: auto;
+  }
+
+  .kontak .row {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  .a4-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .slider {
+    height: auto;
+  }
+
+  .slider img {
+    height: auto;
+  }
+}
